@@ -1,0 +1,9 @@
+bin
+packages
+obj
+*.suo
+*.user
+Package
+/.vs/config/applicationhost.config
+/.vs/CodeDemo/v15/Server/sqlite3
+/CodeDemo.WebApplication/Properties/PublishProfiles/stageharestech - Web Deploy.pubxml
