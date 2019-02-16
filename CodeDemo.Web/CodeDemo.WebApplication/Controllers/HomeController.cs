@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoShopSystemManagement.Data.Repositories.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,8 +9,14 @@ namespace CodeDemo.WebApplication.Controllers
 {
     public class HomeController : Controller
     {
+        private IPeopleRepository _peopleRepository;
+        public HomeController(IPeopleRepository peopleRepository)
+        {
+            _peopleRepository = peopleRepository;
+        }
         public ActionResult Index()
         {
+            var x= _peopleRepository.GetAll();
             return View();
         }
 
