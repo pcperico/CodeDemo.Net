@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutoShopSystemManagement.Data.Repositories.Interfaces
+namespace CodeDemo.Data.Repositories.Interfaces
 {
     public interface IRepository<T> where T : class
     {

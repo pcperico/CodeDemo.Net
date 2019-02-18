@@ -1,5 +1,4 @@
-﻿using AutoShopSystemManagement.Data.Entities;
-using System.ComponentModel;
+﻿using CodeDemo.Data.Entities;
 using System.Data.Entity;
 
 
@@ -13,5 +12,6 @@ namespace CodeDemo.Data
         }
 
         public DbSet<People>People { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

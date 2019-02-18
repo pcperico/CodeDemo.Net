@@ -6,7 +6,8 @@ namespace CodeDemo.WebApplication {
                         {
                             x.Scan(scan =>
                                     {
-                                        scan.Assembly("CodeDemo.Data");                                        
+                                        scan.Assembly("CodeDemo.Data");
+                                        scan.Assembly("CodeDemo.BusinessRules");
                                         scan.TheCallingAssembly();
                                         scan.WithDefaultConventions();
                                     });

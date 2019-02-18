@@ -1,4 +1,5 @@
-﻿using AutoShopSystemManagement.Data.Repositories.Interfaces;
+﻿
+using CodeDemo.BusinessRules.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,17 +10,21 @@ namespace CodeDemo.WebApplication.Controllers
 {
     public class HomeController : Controller
     {
-        private IPeopleRepository _peopleRepository;
-        public HomeController(IPeopleRepository peopleRepository)
+        private IPeopleService _peopleService;
+        public HomeController(IPeopleService peopleService)
         {
-            _peopleRepository = peopleRepository;
+            _peopleService = peopleService;
         }
         public ActionResult Index()
         {
-            var x= _peopleRepository.GetAll();
-            return View();
+           return View();
         }
 
+        public ActionResult ListPeople()
+        {
+            var model = _peopleService.GetAllPeople();
+            return View(model);
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

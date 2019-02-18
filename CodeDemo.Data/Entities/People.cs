@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutoShopSystemManagement.Data.Entities
+namespace CodeDemo.Data.Entities
 {
     [Table("People")]
     public class People:EntityBase

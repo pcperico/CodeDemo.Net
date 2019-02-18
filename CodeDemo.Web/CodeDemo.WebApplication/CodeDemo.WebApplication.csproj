@@ -202,6 +202,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\ListPeople.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -226,6 +227,10 @@
     <ProjectReference Include="..\..\CodeDemo.Data\CodeDemo.Data.csproj">
       <Project>{a78bee65-bc12-4e9d-a864-2cf781ea7a9c}</Project>
       <Name>CodeDemo.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CodeDemo.BusinessRules\CodeDemo.BusinessRules.csproj">
+      <Project>{1f5d3ed3-7319-43d1-86dd-70d7fabbc434}</Project>
+      <Name>CodeDemo.BusinessRules</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
