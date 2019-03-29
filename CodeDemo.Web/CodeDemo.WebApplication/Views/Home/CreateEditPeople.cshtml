@@ -1,0 +1,60 @@
+﻿@model CodeDemo.BusinessRules.Models.UserModel
+
+@{
+    ViewBag.Title = "CreatePeople";
+}
+
+<h2>CreatePeople</h2>
+
+
+@using (Html.BeginForm("CreateEditPeople", "Home", FormMethod.Post, new { @class = "createEditForm" }))
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>Create Edit Users</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(x=>x.User.Id)
+    @Html.HiddenFor(x=>x.People.Id)
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <label>FistName: </label>
+            @Html.TextBoxFor(x => x.People.FirstName,new{@class="form-control"})
+            @Html.ValidationMessageFor(x=>x.People.FirstName)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <label>LastName: </label>
+            @Html.TextBoxFor(x => x.People.LastName, new { @class = "form-control"})
+            @Html.ValidationMessageFor(x=>x.People.LastName)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <label>UserName: </label>
+            @Html.TextBoxFor(x => x.User.UserName, new { @class = "form-control"})
+            @Html.ValidationMessageFor(x=>x.User.UserName)
+        </div>
+        <div class="col-md-offset-2 col-md-10">
+            <label>Password: </label>
+            @Html.PasswordFor(x => x.User.Password, new { @class = "form-control"})
+            @Html.ValidationMessageFor(x=>x.User.Password)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create/Update" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

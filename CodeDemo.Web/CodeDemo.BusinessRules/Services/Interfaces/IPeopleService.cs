@@ -11,6 +11,8 @@ namespace CodeDemo.BusinessRules.Services.Interfaces
     public interface IPeopleService
     {
         void CreatePeopleAndUser(UserModel model);
+        bool DeleteUser(int id);
         List<People> GetAllPeople();
+        UserModel EditUser(int id);
     }
 }
